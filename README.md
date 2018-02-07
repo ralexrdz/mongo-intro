@@ -36,7 +36,7 @@ Ej.
 }
 ```
 
-``` shell
+``` js
 db.usuarios.find({name: 'Raul'},{likes: 1})
 ```
 
@@ -49,16 +49,16 @@ WHERE U.id = UL.id
 
 - Insert (Create)
 
-``` shell
+``` js
 db.<collection>.insert(<js object>)`
 ```
 
-``` shell
+``` js
 db.<collection>.insertMany([<js object1>, <js object2>])`
 ```
 
 - Find (Read)
-``` shell
+``` js
 db.<collection>.find(<query criteria>, <fields to get>).<cursor modifiers>`
 ```
 cursor modifiers:
@@ -66,13 +66,31 @@ cursor modifiers:
   - limit (sólo dame x numero de docs)
 
 - Update update = updateOne, updateMany, replace, replaceMany
-``` shell
+``` js
 db.<collection>.update(<query criteria>, $set: {<fieldname>: <new value>},{<options>} )
 ```
 options:
-  - multi
+  - multi (updateMany)
   - upsert (si no lo encuentra, lo inserta)
 - Delete  DeleteOne, DeleteMany
-``` shell
-db.<collection>.delete(<query criteria>, <fields to get>).<cursor modifiers>`
+``` js
+db.<collection>.delete(<query criteria>)`
+```
+
+### JOINS
+
+- Aggreate function ($lookup)
+
+``` js
+db.<collection>.aggregate([
+    {$lookup:
+        {
+            from: 'registro',
+            localField: 'people',
+            foreignField: '_id',
+            as: 'peopleNames'
+        }        
+     }
+  ]
+)
 ```
