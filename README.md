@@ -100,6 +100,20 @@ db.<collection>.aggregate([
 )
 ```
 
+#### Comandos para correr mongodb
+
+necesito primero prender el servidor de mongodb
+
+`mongod`
+
+para accesar a la terminal de mongo
+
+`mongo`
+
+#### GUI para mongo Robomongo o Robo3T
+
+
+
 ### MONGOOSE ORM
 
  - ¿qué es un ORM?
@@ -123,4 +137,4 @@ Desventajas
 
 #### Model
 
-#### 
+####
