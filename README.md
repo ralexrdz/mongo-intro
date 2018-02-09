@@ -2,12 +2,17 @@
 
 ## NoSQL
 
+[Qué son](https://www.mongodb.com/nosql-explained)
+[Tutorial de mongo](https://docs.mongodb.com/tutorials/)
+
+
 - Sistema de datos FLEXIBLE
 -
 
 ## Diff entre SQL y NoSQL
 
 [Acordeon terminilogía entre SQL y NoSQL](https://docs.mongodb.com/manual/reference/sql-comparison/)
+[Diferencias](https://www.sitepoint.com/sql-vs-nosql-differences/)
 
 TABLE === COLLECTION
 
@@ -85,12 +90,37 @@ db.<collection>.delete(<query criteria>)`
 db.<collection>.aggregate([
     {$lookup:
         {
-            from: 'registro',
-            localField: 'people',
-            foreignField: '_id',
-            as: 'peopleNames'
+            from: '<other collection>',
+            localField: '<field or array in current collection>',
+            foreignField: '<field in other collection>',
+            as: '<result new join field name>'
         }        
      }
   ]
 )
 ```
+
+### MONGOOSE ORM
+
+ - ¿qué es un ORM?
+
+Object-Relational mapping
+Componente que te permite realizar acciones con una base de datos desde un lenguaje orientado a objetos
+
+Ventajas
+
+    Facilidad y velocidad de uso
+    Abstracción de la base de datos usada.
+    Seguridad de la capa de acceso a datos contra ataques.
+    Validación de tipos de datos
+
+Desventajas
+
+    En entornos con gran carga poner una capa más en el proceso puede mermar el rendimiento.
+    Aprender el nuevo lenguaje del ORM.
+
+#### Schema
+
+#### Model
+
+#### 

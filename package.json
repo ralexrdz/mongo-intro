@@ -1,0 +1,23 @@
+{
+  "name": "mongo-intro",
+  "version": "1.0.0",
+  "description": "## NoSQL",
+  "main": "index.js",
+  "dependencies": {
+    "mongoose": "^5.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ralexrdz/mongo-intro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ralexrdz/mongo-intro/issues"
+  },
+  "homepage": "https://github.com/ralexrdz/mongo-intro#readme"
+}
