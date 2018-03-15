@@ -7,7 +7,6 @@
 
 
 - Sistema de datos FLEXIBLE
--
 
 ## Diff entre SQL y NoSQL
 
@@ -70,16 +69,17 @@ cursor modifiers:
   - skip (brincate tantos)
   - limit (sólo dame x numero de docs)
 
-- Update update = updateOne, updateMany, replace, replaceMany
+  Update update = updateOne, updateMany, replace, replaceMany
 ``` js
-db.<collection>.update(<query criteria>, $set: {<fieldname>: <new value>},{<options>} )
+db.<collection>.update(<query criteria>, {$set: {<fieldname>: <new value>}},{<options>} )
 ```
 options:
   - multi (updateMany)
   - upsert (si no lo encuentra, lo inserta)
-- Delete  DeleteOne, DeleteMany
+
+Delete  DeleteOne, DeleteMany
 ``` js
-db.<collection>.delete(<query criteria>)`
+db.<collection>.deleteOne(<query criteria>)`
 ```
 
 ### JOINS

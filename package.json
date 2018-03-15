@@ -4,6 +4,7 @@
   "description": "## NoSQL",
   "main": "index.js",
   "dependencies": {
+    "mongodb": "^3.0.4",
     "mongoose": "^5.0.3"
   },
   "devDependencies": {},
