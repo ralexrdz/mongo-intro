@@ -17,13 +17,13 @@ MongoClient.connect(url, function (err, client) {
       email: 'mail@mail.com',
       datosContacto: {
         telefono: '123123123'
-      }
+      },
       direccion: {
         calle: 'Calle hola',
         numero: 123
-      }
+      },
       skills: [
-        "hacker", "dev",
+        'hacker', 'dev'
       ]
     },
     {
@@ -32,40 +32,53 @@ MongoClient.connect(url, function (err, client) {
       email: 'mail@mail.com',
       datosContacto: {
         telefono: '123123123'
-      }
+      },
       direccion: {
         calle: 'Calle hola',
         numero: 123
-      }
+      },
       skills: [
-        "design", "ux", "dev"
+        'design', 'ux', 'dev'
       ]
     },
     {
-      username: 'paco',
+      username: 'hugo',
       password: 'asdasdasd',
       email: 'mail@mail.com',
       datosContacto: {
         celular: '044 123123123'
-      }
+      },
       direccion: {
         calle: 'Calle hola',
         numero: 123
-      }
+      },
       skills: [
-        "hacker", "dev",
+        'python', 'data-mining'
       ]
     }
   ]
 
   // Insert Many
 
-  // Read All
+  db.collection('usuario').insertMany(usuarios, function (err, res) {
+    if (err) console.log(err)
+    console.log(res)
+  })
 
+  // Read All
 
   // Read by Skill
 
-  // 
+  //
+
+  let posts = [
+    {
+      text: 'Hola amigoos',
+      tags: ['5aa9e404358f902e14369f56','5aa9e404358f902e14369f57']
+    }
+  ]
+
+
 
   client.close()
 })
