@@ -178,7 +178,7 @@ userModel.find
 .skip
 .exec(callback)
 
-dentro de los callbacks, cada objeto tiene las| funciones
+dentro de los callbacks, cada objeto tiene las funciones
  - `save()`
 que modifica los valores antes modificados en el objecto, en el documento de la base de datos
  - `delete()`
@@ -208,4 +208,18 @@ Para hacer referencia usando mongo ObjectsIds
 ...
   amigos: [{ type: mongoose.Schema.Types.ObjectId, ref: 'usuarios' }]
 ...
+```
+
+
+### Populate References in modelo
+
+``` js
+User.find({})
+.populate('amigos')
+.exec(function (err, users) {
+  if (err) console.log(err)
+  console.log(users.map(u => u.amigos))
+})
+
+// user[0].amigos será un objecto JS no un arreglo de ObjectIds
 ```
