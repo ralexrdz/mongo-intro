@@ -13,7 +13,7 @@
 ```
 1. [ ] Crear una base de datos... 
 ```
-> db use <nombre que ustedes elijan>
+> use <nombre que ustedes elijan>
 ```
 1. [ ] crear una nueva colección insertando un nuevo dato
 ```
