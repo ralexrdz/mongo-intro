@@ -20,7 +20,7 @@ db.once('open', function () {
       default: Date.now
     },
     videoGames: [
-      type: mongoose.Schema.Type.Object)
+      {type: mongoose.Schema.Type.Object}
     ]
   })
 
@@ -32,5 +32,4 @@ db.once('open', function () {
     if (err) console.log(err)
     console.log(res)
   })
-
 })
